@@ -1,0 +1,106 @@
+@media screen and (max-width: 750px) {
+  #page {
+    width: 100% !important;
+  }
+
+  #aside_content {
+    width: 100% !important;
+  }
+
+  .layout_page {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .sites-contair {
+    display: inline;
+  }
+
+  .bangumibox {
+    display: inline;
+  }
+
+  .bangumi-card {
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    margin: 4px auto;
+  }
+
+  .siteinfo-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    min-height: 100px;
+  }
+
+  .siteinfo-box i {
+    display: none;
+  }
+
+  .blogtitle {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #aside_content .card-widget {
+    margin-right: 15px;
+  }
+
+  .sites-contair {
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bangumibox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bangumi-card {
+    border-radius: 5px;
+    width: calc(100% / 3 - 8px);
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+
+  .siteinfo-box {
+    flex: 1 1 calc(50% - 10px); /* 每个盒子尝试占据一行的一半宽度减去一些间隙 */
+    margin: 0.5rem 5px; /* 统一外边距 */
+    padding: 0px 0.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+
+  .siteinfo-box:nth-child(3) {
+    flex: 1 1 calc(50% - 10px); /* 第三个盒子与第一个盒子宽度相同 */
+    margin: 0.5rem 5px; /* 调整外边距以确保居中显示 */
+  }
+
+  .sites-contair::after {
+    content: "";
+    flex: 1 1 calc(50% - 10px); /* 添加一个透明的伪元素以填充剩余空间 */
+  }
+
+  /* .blogtitle {
+    width: 60%;
+  } */
+}
