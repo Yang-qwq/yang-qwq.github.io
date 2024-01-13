@@ -1,0 +1,76 @@
+/*
+    自适应深色主题
+    PR: https://github.com/Yang-qwq/yang-qwq.github.io/pull/2
+    感谢 dsy4567 为本项目做出的贡献！
+*/
+
+@media (prefers-color-scheme: dark) {
+
+  #aside_content .card-widget,
+  #page {
+    background-color: #333 !important;
+  }
+
+  body {
+    background-color: #111 !important;
+    color: #eee !important;
+  }
+
+  hr {
+    border: 2px dashed #1f97af !important;
+    background: #202020;
+  }
+
+  .fa {
+    color: #eee !important;
+  }
+
+  .skillbar {
+    background-color: #111 !important;
+  }
+
+  .skillbar .skill-bar-percent {
+    color: #eee !important;
+  }
+
+  .aplayer {
+    background-color: #333 !important;
+  }
+
+  .aplayer.aplayer-withlist .aplayer-info {
+    border-bottom: 1px solid #111 !important;
+  }
+
+  .aplayer-loaded {
+    background-color: #555 !important;
+  }
+
+  .aplayer-bar {
+    background-color: #111 !important;
+  }
+
+  .aplayer .aplayer-lrc:before {
+    background: linear-gradient(180deg, #111 0, #1110) !important;
+  }
+
+  .aplayer .aplayer-lrc:after {
+    background: linear-gradient(180deg, #1110 0, #111c) !important;
+  }
+
+  .aplayer .aplayer-list ol li {
+    border-top: 1px solid #111 !important;
+  }
+
+  .aplayer .aplayer-list ol li:hover,
+  .aplayer .aplayer-list ol li.aplayer-list-light {
+    background-color: #111 !important;
+  }
+
+  .siteinfo-box {
+    background-color: #444 !important;
+  }
+
+  img {
+    filter: saturate(80%);
+  }
+}

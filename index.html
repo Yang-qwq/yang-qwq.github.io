@@ -1,42 +1,60 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-    <title>不才才 bucaicai</title>
-    <meta name="description" content="95后青年，后端开发者，略懂前端, 学生，实习，缺乏社会的毒打">
-    <meta name="keywords" content="Java,Spring,个人博客，微信小程序，博客">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="static/css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>阳的小站 | QAQ！</title>
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="阳的小站 - 这是一个正在编程路上摸爬滚打的一个人的个人站" />
+    <meta name="keywords" content="阳,Yang,个人站,阳的网站" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="static/img/favicon.ico" />
+    <link rel="icon" href="static/img/favicon.ico" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/css/dark.css" />
+    <link rel="stylesheet" href="static/css/responsive.css" />
+    <link rel="stylesheet" href="static/css/cursor.css" />
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/jquery.fancybox@2.1.5/source/jquery.fancybox.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" crossorigin="anonymous" />
+
+    <!-- jQuery -->
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jquery.fancybox@2.1.5/source/jquery.fancybox.pack.js"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" crossorigin="anonymous"></script>
+
+    <!-- 剪贴板复制 -->
+    <script src="https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="static/js/uidcopy.js"></script>
+
+    <!-- 日期格式化与计时器组件 -->
+    <script src="static/js/dateformat.js"></script>
+    <script src="static/js/timer.js"></script>
+
     <script type="text/javascript">
-        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-            alert('朋友，上古浏览器不支持呢~');
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            alert("朋友，请不要使用IE呢~");
+            window.close();
         }
     </script>
 </head>
 
 <body>
     <div id="body-wrap">
-        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
+        <nav class="not_index_bg" id="nav">
             <div id="page_site-info">
                 <div id="site-title">
                     <span class="blogtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                    <script>
-                        var typed = new Typed(".blogtitle", {
-                            strings: ['求知若饥，虚心若愚', 'Stay Hungry Stay Foolish'],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
-                    </script>
                 </div>
             </div>
         </nav>
@@ -46,15 +64,29 @@
                     <div class="card-widget card-info">
                         <div class="card-content">
                             <div class="card-info-avatar is-center">
-                                <img class="avatar-img"
-                                    src="https://cdn.jsdelivr.net/gh/laoxuai/assert/images/20200125221102.png"
-                                    alt="avatar">
-                                <div class="author-info__name">Bucaicai</div>
-                                <div class="author-info__description">95后青年，后端开发者，略懂前端, <s>学生，实习</s>，缺乏社会的毒打</div>
+                                <img class="avatar-img" src="static/img/head.webp" alt="我的头像" />
+                                <div class="author-info__name">Yang</div>
+                                <div class="author-info__description">
+                                    一个正在编程路上摸爬滚打的人
+                                </div>
                             </div>
+
                             <div class="card-info-social-icons is-center">
-                                <a class="social-icon" href="https://github.com/laoxuai" target="_blank">
+                                <a title="github" class="social-icon" href="https://github.com/Yang_qwq" target="_blank"
+                                    rel="noopener noreferrer">
                                     <i class="fa fa-github"></i>
+                                </a>
+                                <span>|</span>
+                                <a title="steam" class="social-icon" href="https://steamcommunity.com/id/yang_qwq/">
+                                    <i class="fa fa-steam-square"></i>
+                                </a>
+                                <span>|</span>
+                                <a title="bilibili" class="social-icon" href="https://space.bilibili.com/484660963">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <span>|</span>
+                                <a title="邮箱" class="social-icon" href="mailto:yang_qwq@qq.com">
+                                    <i class="fa fa-envelope"></i>
                                 </a>
                             </div>
                         </div>
@@ -69,10 +101,11 @@
                             <div id="hitokoto"></div>
                         </div>
                     </div>
+
                     <div class="card-widget card-announcement">
                         <div class="card-content">
                             <div class="item-headline">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
                                 <span>今日诗词</span>
                             </div>
                             <div id="jinrishici-sentence"></div>
@@ -87,90 +120,315 @@
                             </div>
                             <div class="webinfo">
                                 <div class="webinfo-item">
-                                    <div class="webinfo-site-uv-name">本站访客数 :</div>
+                                    <div class="webinfo-site-uv-name">
+                                        本站访客数 :
+                                    </div>
                                     <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
                                 </div>
                                 <div class="webinfo-item">
-                                    <div class="webinfo-site-name">本站总访问量 :</div>
+                                    <div class="webinfo-site-name">
+                                        本站总访问量 :
+                                    </div>
                                     <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-name">
+                                        本站总在线时长 :
+                                    </div>
+                                    <div id="onlinetimer"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>域名过期时长</span>
+                            </div>
+                            <div class="webinfo">
+                                <h3>yang-qwq.top</h3>
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-name">
+                                        本域名过期时间 :
+                                    </div>
+                                    <div id="domainexpiredtimer_2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                                <span>友链列表</span>
+                            </div>
+                            <div class="webinfo">
+                                <ul>
+                                    <li>
+                                        <a title="YuxiangWang_0525的博客" class="social-icon"
+                                            href="https://blog.yuxiangwang0525.com/">YuxiangWang_0525的博客</a>
+                                    </li>
+                                    <li>
+                                        <a title="luomoの云日常" class="social-icon"
+                                            href="https://luotianyi.online/">luomoの云日常</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <article id="page">
                     <div class="article-container">
-                        <h2>音乐</h2>
-                        <meting-js auto="https://y.qq.com/n/yqq/playlist/7713574197.html">
+                        <h2>子站点导航</h2>
+                        <div class="sites-contair">
+                            <div role="navigation" class="siteinfo-box" id="website_board"
+                                style="background-color: rgb(255, 248, 172)">
+                                <h2>
+                                    <a href="https://board.yang-qwq.top/" target="_self">留言板</a>
+                                </h2>
+                                <p>新框架留言板，给你一个全新的体验</p>
+                            </div>
+
+                            <div role="navigation" class="siteinfo-box" id="website_block_server_wiki"
+                                style="background-color: #4abf8a">
+                                <h2>
+                                    <a href="./block-server-wiki/" target="_self">方块元玩家文档</a>
+                                </h2>
+                                <p>方块元玩家文档</p>
+                            </div>
+
+                            <div role="navigation" class="siteinfo-box" id="website_status"
+                                style="background-color: rgb(59, 214, 113)">
+                                <h2>
+                                    <a href="https://stats.uptimerobot.com/kKoX9ukrwm" target="_blank"
+                                        rel="noopener noreferrer">服务器在线状态</a><i class="fa fa-fw fa-external-link"
+                                        aria-hidden="true"></i>
+                                </h2>
+                                <p>在这里查看所有服务器以及站点的状态</p>
+                            </div>
+
+                            <div role="navigation" class="siteinfo-box" id="cloudreve"
+                                style="background-color: rgb(65, 125, 255)">
+                                <h2>
+                                    <a href="https://cloudreve.yang-qwq.top/" target="_blank"
+                                        rel="noopener noreferrer">我的私人网盘</a>
+                                </h2>
+                                <s>你或许可以试着进一下？</s>
+                            </div>
+                        </div>
+                        <hr />
+
+                        <h2>听歌</h2>
+                        <meting-js server="netease" type="playlist" id="7123866465" autoplay="false" order="random"
+                            preload="metadata">
                         </meting-js>
-                        <hr>
+                        <hr />
+
+                        <h2>关于我</h2>
+                        <p>
+                            这个人很懒，啥都没有写~
+                        </p>
+
+                        <h3>我喜欢的游戏</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.minecraft.net/zh-hans">Minecraft</a>
+                            </li>
+                            <li>
+                                <a href="https://ys.mihoyo.com/">原神</a>&nbsp;
+                            </li>
+                            <li>
+                                <a href="https://osu.ppy.sh/">osu!</a> <a
+                                    href="https://osu.ppy.sh/users/26321853">玩家档案</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">CS:GO</a>
+                            </li>
+                            <li>
+                                <a href="https://sr.mihoyo.com/">崩坏：星穹铁道</a>
+
+                                <!-- 自删除元素 -->
+                                <button title="复制UID" class="copy-sr-uid" data-clipboard-text="107831971"
+                                    onclick="copyUid('.copy-sr-uid', 107831971)">
+                                    复制UID
+                                </button>
+                            </li>
+                            <li>
+                                <a href="https://store.steampowered.com/app/1091500/_2077/">赛博朋克2077</a>
+                            </li>
+                            <li>
+                                <a href="#">Blue Archive</a>
+                                <button title="复制UID（国际服）" class="copy-ba-uid" data-clipboard-text="16 433 367"
+                                    onclick="copyUid('.copy-ba-uid', '16 433 367')">
+                                    复制UID（国际服）
+                                </button>
+                            </li>
+                            <li>
+                                <a href="#">赛马娘</a>
+                            </li>
+                        </ul>
+                        <hr />
+
+                        <h2>看过的番剧</h2>
+                        <div class="bangumibox">
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/429c1b7a.jpg" alt="孤独摇滚！的宣传图">
+                                <p>孤独摇滚！</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/00000001.jpg" alt="莉可丽丝/铳动彼岸花的主视觉图">
+                                <p>莉可丽丝/铳动彼岸花</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/5eeebf97.jpg" alt="赛马娘 Pretty Derby Road to the Top的封面图">
+                                <p>赛马娘 Pretty Derby Road to the Top</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/75400af2.jpg" alt="赛马娘四格的封面图">
+                                <p>赛马娘四格</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/3928023e.jpg" alt="赛马娘 Pretty Derby 第二季的封面图">
+                                <p>赛马娘 Pretty Derby 第二季</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/a9641663.jpg" alt="赛马娘 Pretty Derby的封面图">
+                                <p>赛马娘 Pretty Derby</p>
+                            </div>
+                            <div class="bangumi-card">
+                                <img src="static/img/bangumi/093302de.jpg" alt="别当欧尼酱了！/别当哥哥了！的封面图">
+                                <p>别当欧尼酱了！</p>
+                            </div>
+                            <i>* 注：如发现任何错误请及时提issue！</i>
+                        </div>
+                        <hr />
 
                         <h2>技能</h2>
                         <div class="skillbox">
                             <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 75%">
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #ff0066 0%,
+                                                #ff00cc 100%
+                                            );
+                                            width: 25%;
+                                        ">
                                     <span>Java</span>
                                 </div>
-                                <div class="skill-bar-percent">75%</div>
+                                <div class="skill-bar-percent">25%</div>
                             </div>
                             <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 40%">
-                                    <span>前端</span>
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #000000 0%,
+                                                #8892bf 100%
+                                            );
+                                            width: 20%;
+                                        ">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill-bar-percent">20%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #3746a9 0%,
+                                                #3746a9 100%
+                                            );
+                                            width: 40%;
+                                        ">
+                                    <span>C/C++</span>
                                 </div>
                                 <div class="skill-bar-percent">40%</div>
                             </div>
                             <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 60%">
-                                    <span>Spring</span>
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #3474a6 0%,
+                                                #ffd643 100%
+                                            );
+                                            width: 90%;
+                                        ">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-bar-percent">90%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #9900ff 0%,
+                                                #cc66ff 100%
+                                            );
+                                            width: 60%;
+                                        ">
+                                    <span>前端</span>
                                 </div>
                                 <div class="skill-bar-percent">60%</div>
                             </div>
                             <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                                    <span>SpringMVC</span>
+                                <div class="skillbar-title" style="
+                                            background: linear-gradient(
+                                                to right,
+                                                #895527 0%,
+                                                #53b623 100%
+                                            );
+                                            width: 100%;
+                                        ">
+                                    <span>Minecraft</span>
                                 </div>
-                                <div class="skill-bar-percent">70%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #00BCD4 0%, #f54009 100%); width: 80%">
-                                    <span>SpringBoot</span>
-                                </div>
-                                <div class="skill-bar-percent">80%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 60%">
-                                    <span>Mybatis</span>
-                                </div>
-                                <div class="skill-bar-percent">60%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                                    <span>数据结构与算法</span>
-                                </div>
-                                <div class="skill-bar-percent">75%</div>
+                                <div class="skill-bar-percent">100%</div>
                             </div>
                         </div>
+                        <hr />
 
-                        <hr>
-                        <h2>刷题</h2>
+                        <h2>工具箱</h2>
                         <div class="tool">
-                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
-                            <a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>
+                            <a href="https://www.chunkbase.com/" target="_blank" rel="noopener noreferrer">Chunk
+                                Base(Minecraft结构地形寻找器)</a>
+                            <a href="https://www.sojson.com/" target="_blank" rel="noopener noreferrer">sojson</a>
+                            <a href="https://c.runoob.com/" target="_blank" rel="noopener noreferrer">菜鸟工具</a>
+                            <a href="https://www.itdog.cn/" target="_blank" rel="noopener noreferrer">ITDOG</a>
+                            <a href="https://cook.aiurs.co/" target="_blank" rel="noopener noreferrer">How To Cook</a>
+                            <a href="https://ipjisuanqi.com/" target="_blank" rel="noopener noreferrer">IP计算器</a>
                         </div>
+                        <hr />
 
-                        <hr>
-                        <h2>收藏</h2>
+                        <h2>有意思的东西</h2>
                         <div class="tool">
-                            <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
-                            <a href="https://adzhp.cn/" target="_blank" rel="noopener noreferrer">爱达杂货铺、</a>
-                            <a href="http://ifeve.com/" target="_blank" rel="noopener noreferrer">并发编程网</a>
+                            <a href="https://msg.march7th.cn/" target="_blank" rel="noopener noreferrer">星穹铁道短信生成器</a>
+                            <a href="http://genshinvoice.top/" target="_blank" rel="noopener noreferrer">原神在线TTS</a>
+                        </div>
+                        <hr />
+
+                        <h2>读书&刷题</h2>
+                        <div class="tool">
+                            <a href="https://www.r2coding.com/" target="_blank" rel="noopener noreferrer">编程自学之路</a>
+                            <a href="https://github.com/justjavac/free-programming-books-zh_CN/" target="_blank"
+                                rel="noopener noreferrer">编程中文书籍索引</a>
+                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank"
+                                rel="noopener noreferrer">Leetcode</a>
+                            <a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank"
+                                rel="noopener noreferrer">剑指 Offer</a>
+                        </div>
+                        <hr />
+
+                        <h2>摸鱼</h2>
+                        <div class="tool">
+                            <a href="https://xingye.me/game/" target="_blank" rel="noopener noreferrer">网页小游戏列表</a>
+                            <!-- <a href="http://osugame.online/" target="_blank" rel="noopener noreferrer">戳泡泡</a> -->
+                            <a href="https://www.yikm.net/" target="_blank" rel="noopener noreferrer">小霸王游戏</a>
+                            <a href="https://www.4399.com/" target="_blank" rel="noopener noreferrer">4399小游♂戏</a>
+                            <a href="http://www.iyinghua.io/" target="_blank" rel="noopener noreferrer">樱花动漫</a>
                         </div>
                     </div>
                 </article>
@@ -178,101 +436,132 @@
         </main>
         <footer id="footer">
             <div id="footer-wrap">
-                <div class="copyright">&copy;2019 - 2021 BY Bucaicai</div>
+                <div class="copyright">
+                    &copy;Yang 2019 - 2024 | Powered by
+                    <a target="_blank" href="https://github.com/wexuo/home"
+                        rel="noopener noreferrer">wexuo/home</a>&nbsp;
+                    <a target="_blank" href="sitemap.xml" rel="noopener noreferrer">Sitemap.xml</a>&nbsp;
+                    <a target="_blank" href="https://github.yang-qwq.top/" rel="noopener noreferrer">github pages</a>
+                </div>
+                <div>
+                    本站CDN服务由<a target="_blank" href="https://www.cloudflare.com/zh-cn/"
+                        rel="noopener noreferrer">CloudFlare</a>提供&nbsp;
+                    <a href="https://icp.gov.moe/?keyword=20220385" target="_blank"
+                        rel="noopener noreferrer">萌ICP备20220385号</a>
+                </div>
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
-    <!-- aplayer、meting -->
-    <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script async src="https://unpkg.com/instant.page@5.2.0/instantpage.js" type="module"
+        crossorigin="anonymous"></script>
+    <script async src="https://unpkg.com/lazysizes@5.3.2/lazysizes.min.js" crossorigin="anonymous"></script>
+
+    <!-- APlayer -->
+    <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" crossorigin="anonymous"></script>
+    <!-- MetingJS -->
+    <script async src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js" crossorigin="anonymous"></script>
 
     <!-- nplayer -->
-    <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
+    <script src="https://unpkg.com/nplayer@1.0.15/dist/index.min.js" crossorigin="anonymous"></script>
 
-    <!--   一言、今日诗词   -->
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <!-- 一言、今日诗词 -->
+    <script async src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" crossorigin="anonymous"></script>
+    <script async src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
     <!-- 看板娘 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <!-- TODO: 此处打算以后自定义，所以先注释掉 -->
+    <!-- <script async src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.min.js"
+        crossorigin="anonymous"></script> -->
 
     <!--鼠标点击效果-->
-    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+    <script async src="https://github.yang-qwq.top/CDN-for-itrhx.com/js/maodian.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        console.clear();
-        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
-        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/laoxuai");
-        console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+    <!-- 初始化计时器 -->
+    <script>
+        setInterval(() => {
+            descTime(
+                "2024-1-13 11:06:37",
+                document.getElementById("domainexpiredtimer_2")
+            );
+        }, 1000);
 
+        setInterval(() => {
+            ascTime(
+                "2021-12-22 08:00:00",
+                document.getElementById("onlinetimer")
+            );
+        }, 1000);
+    </script>
 
-        (function ($) {
-            $.fn.snow = function (options) {
-                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
-                    documentHeight = $(document).height(),
-                    documentWidth = $(document).width(),
-                    defaults = {
-                        minSize: 10,
-                        maxSize: 20,
-                        newOn: 1000,
-                        flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
-                    },
-                    options = $.extend({}, defaults, options);
-                var interval = setInterval(function () {
-                    var startPositionLeft = Math.random() * documentWidth - 100,
-                        startOpacity = 0.5 + Math.random(),
-                        sizeFlake = options.minSize + Math.random() * options.maxSize,
-                        endPositionTop = documentHeight - 200,
-                        endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
-                        durationFall = documentHeight * 10 + Math.random() * 5000;
-                    $flake.clone().appendTo('body').css({
-                        left: startPositionLeft,
-                        opacity: startOpacity,
-                        'font-size': sizeFlake,
-                        color: options.flakeColor
-                    }).animate({
-                        top: endPositionTop,
-                        left: endPositionLeft,
-                        opacity: 0.2
-                    }, durationFall, 'linear', function () {
-                        $(this).remove()
-                    });
-                }, options.newOn);
-            };
-        })(jQuery);
-        $(function () {
-            $.fn.snow({
-                minSize: 5, /* 定义雪花最小尺寸 */
-                maxSize: 50,/* 定义雪花最大尺寸 */
-                newOn: 800  /* 定义密集程度，数字越小越密集 */
-            });
+    <!-- 标题Typed -->
+
+    <script>
+        new Typed(".blogtitle", {
+            strings: [
+                "阳的个人站",
+                "一个正在编程路上摸爬滚打的人",
+                "Yang yyds!",
+                'echo "Hello, World!"',
+                "记得常去友链里看看",
+                "别忘了给我留言！",
+                "欸嘿是什么意思啊？",
+                "你干嘛，哎呦~",
+                "你知道吗：没活了可以去咬打火机"
+            ],
+            startDelay: 300,
+            typeSpeed: 85,
+            loop: true,
+            backSpeed: 50,
+            showCursor: true,
         });
+    </script>
 
-        // 浏览器搞笑标题
+    <!-- 浏览器搞笑标题 -->
+
+    <script async>
         var OriginTitle = document.title;
         var titleTime;
-        document.addEventListener('visibilitychange', function () {
+        document.addEventListener("visibilitychange", function () {
             if (document.hidden) {
-                // $('[rel="icon"]').attr('href', "/funny.ico");
-                document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+                // $('[rel="icon"]').attr('href', "static/img/wtf.ico");
+                document.title = "╭(°A°`)╮ 页面崩溃啦 ~";
                 clearTimeout(titleTime);
-            }
-            else {
-                $('[rel="icon"]').attr('href', "/favicon.ico");
-                document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+            } else {
+                // $('[rel="icon"]').attr('href', "static/img/favicon.ico");
+                document.title = "(ฅ>ω<*ฅ) 噫又好啦 ~" + OriginTitle;
                 titleTime = setTimeout(function () {
                     document.title = OriginTitle;
                 }, 2000);
             }
+        });
+    </script>
+
+    <!-- 基于js的点击事件 -->
+
+    <script>
+        $("#website_board").on("click", function (ev) {
+            ev.target.tagName !== "A" &&
+                window.open("https://board.yang-qwq.top/", "_self");
+        });
+
+        $("#website_block_server_wiki").on("click", function (ev) {
+            ev.target.tagName !== "A" &&
+                window.open("./block-server-wiki/", "_self");
+        });
+
+        $("#website_status").on("click", function (ev) {
+            ev.target.tagName !== "A" &&
+                window.open(
+                    "https://stats.uptimerobot.com/kKoX9ukrwm",
+                    "_blank"
+                );
+        });
+
+        $("#cloudreve").on("click", function (ev) {
+            ev.target.tagName !== "A" &&
+                window.open("http://cloudreve.yang-qwq.top/", "_blank");
         });
     </script>
 </body>

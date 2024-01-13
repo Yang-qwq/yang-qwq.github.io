@@ -1,0 +1,92 @@
+@media screen and (max-width: 750px) {
+  #page {
+    width: 100% !important;
+  }
+
+  #aside_content {
+    width: 100% !important;
+  }
+
+  .layout_page {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .sites-contair {
+    display: inline;
+  }
+
+  .bangumibox {
+    display: inline;
+  }
+
+  .bangumi-card {
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    margin: 4px auto;
+  }
+
+  .siteinfo-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    min-height: 100px;
+  }
+
+  .siteinfo-box i {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #aside_content .card-widget {
+    margin-right: 15px;
+  }
+
+  .sites-contair {
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bangumibox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bangumi-card {
+    border-radius: 5px;
+    width: calc(100% / 3 - 8px);
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+
+  .siteinfo-box {
+    display: flex;
+    flex: 0.5 1 calc(50% - 4rem);
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0px 0.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+}
