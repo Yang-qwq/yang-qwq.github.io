@@ -48,6 +48,10 @@
   .siteinfo-box i {
     display: none;
   }
+
+  .blogtitle {
+    width: 95%;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -88,5 +92,9 @@
     border-radius: 0.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
+  }
+
+  .blogtitle {
+    width: 60%;
   }
 }
