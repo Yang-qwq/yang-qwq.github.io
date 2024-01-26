@@ -51,13 +51,13 @@
 
 <body>
     <div id="body-wrap">
-        <nav class="not_index_bg" id="nav">
+        <div class="head_container not_index_bg">
             <div id="page_site-info">
                 <div id="site-title">
                     <span class="blogtitle"></span>
                 </div>
             </div>
-        </nav>
+        </div>
         <main id="content-outer">
             <div class="layout_page" id="content-inner">
                 <div class="aside_content" id="aside_content">
@@ -511,7 +511,6 @@
                 "别忘了给我留言！",
                 "欸嘿是什么意思啊？",
                 "你干嘛，哎呦~",
-                "你知道吗：向上滑动有惊喜哦~",
                 "逸一时，误一世，逸久逸久罢已龄"
             ],
             startDelay: 300,
@@ -519,6 +518,14 @@
             loop: true,
             backSpeed: 50,
         });
+    </script>
+
+    <!-- 启动雪花 -->
+    <script async>
+        new SnowScene('main', {
+            color: '#ffffff', // 雪花颜色 (默认 #ffffff)
+            volumn: 800, // 雪花数量/强度 (默认 300)
+        }).play();
     </script>
 
     <!-- 浏览器搞笑标题 -->
@@ -540,27 +547,6 @@
         });
     </script>
 
-    <!-- 向上滚动时全屏nav -->
-    <script async>
-        var lastScrollTop = 0;
-        window.addEventListener("scroll", function () {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop < lastScrollTop && scrollTop <= 0) {
-                document.getElementById('nav').classList.add('fullscreen');
-            } else {
-                document.getElementById('nav').classList.remove('fullscreen');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, false);
-    </script>
-
-    <!-- 启动雪花 -->
-    <script async>
-        new SnowScene('body', {
-            color: '#ffffff', // 雪花颜色 (默认 #ffffff)
-            volumn: 800, // 雪花数量/强度 (默认 300)
-        }).play();
-    </script>
 
     <!-- 基于js的点击事件 -->
     <script>
