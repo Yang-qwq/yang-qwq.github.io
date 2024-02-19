@@ -54,7 +54,7 @@
         <div class="head_container not_index_bg">
             <div id="page_site-info">
                 <div id="site-title">
-                    <span class="blogtitle"></span>
+                    <span class="typed"></span>
                 </div>
             </div>
         </div>
@@ -253,8 +253,8 @@
                                 <a href="https://sr.mihoyo.com/">崩坏：星穹铁道</a>
 
                                 <!-- 自删除元素 -->
-                                <button title="复制UID" class="copy-sr-uid" data-clipboard-text="107831971"
-                                    onclick="copyUid('.copy-sr-uid', 107831971)">
+                                <button title="复制UID" id="copy-sr-uid" data-clipboard-text="107831971"
+                                    onclick="copyUid('#copy-sr-uid', 107831971)">
                                     复制UID
                                 </button>
                             </li>
@@ -263,13 +263,17 @@
                             </li>
                             <li>
                                 <a href="#">Blue Archive</a>
-                                <button title="复制UID（国际服）" class="copy-ba-uid" data-clipboard-text="16 433 367"
-                                    onclick="copyUid('.copy-ba-uid', '16 433 367')">
+                                <button title="复制UID（国际服）" id="copy-ba-uid" data-clipboard-text="16 433 367"
+                                    onclick="copyUid('#copy-ba-uid', '16 433 367')">
                                     复制UID（国际服）
                                 </button>
                             </li>
                             <li>
                                 <a href="#">赛马娘</a>
+                                <button title="复制UID（台服）" id="copy-uma-uid" data-clipboard-text="936 973 006 538"
+                                    onclick="copyUid('#copy-uma-uid', '936 973 006 538')">
+                                    复制UID（台服）
+                                </button>
                             </li>
                         </ul>
                         <hr />
@@ -480,10 +484,10 @@
     <script async src="https://github.yang-qwq.top/CDN-for-itrhx.com/js/maodian.js" crossorigin="anonymous"></script>
 
     <!-- 雪花 -->
-    <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script> -->
 
     <!-- 初始化计时器 -->
-    <script>
+    <script async>
         setInterval(() => {
             descTime(
                 "2025-1-15 11:06:37",
@@ -500,8 +504,8 @@
     </script>
 
     <!-- 标题Typed -->
-    <script>
-        new Typed(".blogtitle", {
+    <script async>
+        new Typed(".typed", {
             strings: [
                 "阳的个人站",
                 "一个正在编程路上摸爬滚打的人",
@@ -511,21 +515,14 @@
                 "别忘了给我留言！",
                 "欸嘿是什么意思啊？",
                 "你干嘛，哎呦~",
-                "逸一时，误一世，逸久逸久罢已龄"
+                "逸一时，误一世，逸久逸久罢已龄",
+                "「我梦见一片焦土，一株破土而生的新蕊，它迎着朝阳绽放，向我低语呢喃。」"
             ],
             startDelay: 300,
             typeSpeed: 85,
             loop: true,
             backSpeed: 50,
         });
-    </script>
-
-    <!-- 启动雪花 -->
-    <script async>
-        new SnowScene('main', {
-            color: '#ffffff', // 雪花颜色 (默认 #ffffff)
-            volumn: 800, // 雪花数量/强度 (默认 300)
-        }).play();
     </script>
 
     <!-- 浏览器搞笑标题 -->
@@ -547,6 +544,13 @@
         });
     </script>
 
+    <!-- 启动雪花 -->
+    <!-- <script async>
+        new SnowScene('main', {
+            color: '#ffffff', // 雪花颜色 (默认 #ffffff)
+            volumn: 800, // 雪花数量/强度 (默认 300)
+        }).play();
+    </script> -->
 
     <!-- 基于js的点击事件 -->
     <script>

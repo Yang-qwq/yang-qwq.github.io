@@ -103,7 +103,7 @@ strong {
 
 #page_site-info {
     position: absolute;
-    top: 10rem;
+    top: 10rem !important;
     width: 100%;
 }
 
@@ -114,15 +114,6 @@ strong {
     line-height: 1.5;
     font-weight: 700;
     font-size: 1.3rem;
-}
-
-.blogtitle {
-    color: #ff0066;
-    /* background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-block;
-    height: 50px; */
 }
 
 main {
