@@ -179,60 +179,6 @@ h1 {
     padding: 1rem 1.2rem;
 }
 
-.skillbar {
-    position: relative;
-    display: block;
-    max-width: 360px;
-    margin: 15px 10px;
-    background: #eee;
-    height: 30px;
-    border-radius: 35px;
-    -moz-border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -webkit-transition: 0.4s linear;
-    -moz-transition: 0.4s linear;
-    -o-transition: 0.4s linear;
-    transition: 0.4s linear;
-    -webkit-transition-property: width, background-color;
-    -moz-transition-property: width, background-color;
-    -o-transition-property: width, background-color;
-    transition-property: width, background-color;
-}
-
-.skillbar .skillbar-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 110px;
-    font-size: 0.9rem;
-    color: #ffffff;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-}
-
-.skillbar .skillbar-title span {
-    display: block;
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0 20px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-}
-
-.skillbar .skill-bar-percent {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    font-size: 12px;
-    height: 30px;
-    line-height: 30px;
-    color: #ffffff;
-    color: rgba(0, 0, 0, 0.5);
-}
-
 a {
     color: #ff0066;
 }
