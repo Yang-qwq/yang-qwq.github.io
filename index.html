@@ -189,24 +189,21 @@
                         <h2>子站点导航</h2>
                         <!-- TODO: 此处准备修改，可以换成带有图标的版本 -->
                         <div class="sites-contair">
-                            <div role="navigation" class="siteinfo-box" id="website_board"
-                                style="background-color: rgb(255, 248, 172)">
+                            <div role="navigation" class="siteinfo-box" style="background-color: rgb(255, 248, 172)" data-click-href="https://board.yang-qwq.top/">
                                 <h2>
                                     <a href="https://board.yang-qwq.top/" target="_self">留言板</a>
                                 </h2>
                                 <p>新框架留言板，给你一个全新的体验</p>
                             </div>
 
-                            <div role="navigation" class="siteinfo-box" id="website_block_server_wiki"
-                                style="background-color: #4abf8a">
+                            <div role="navigation" class="siteinfo-box" style="background-color: #4abf8a" data-click-href="./block-server-wiki/">
                                 <h2>
                                     <a href="./block-server-wiki/" target="_self">方块元玩家文档</a>
                                 </h2>
                                 <p>方块元玩家文档</p>
                             </div>
 
-                            <div role="navigation" class="siteinfo-box" id="website_status"
-                                style="background-color: rgb(59, 214, 113)">
+                            <div role="navigation" class="siteinfo-box" style="background-color: rgb(59, 214, 113)" data-click-href="https://stats.uptimerobot.com/kKoX9ukrwm">
                                 <h2>
                                     <a href="https://stats.uptimerobot.com/kKoX9ukrwm" target="_blank"
                                         rel="noopener noreferrer">服务器在线状态</a><i class="fa fa-fw fa-external-link"
@@ -215,14 +212,13 @@
                                 <p>在这里查看所有服务器以及站点的状态</p>
                             </div>
 
-                            <div role="navigation" class="siteinfo-box" id="cloudreve"
-                                style="background-color: rgb(65, 125, 255)">
+                            <!-- <div role="navigation" class="siteinfo-box" style="background-color: rgb(65, 125, 255)" data-click-href="">
                                 <h2>
                                     <a href="https://cloudreve.yang-qwq.top/" target="_blank"
                                         rel="noopener noreferrer">我的私人网盘</a>
                                 </h2>
                                 <s>你或许可以试着进一下？</s>
-                            </div>
+                            </div> -->
                         </div>
                         <hr />
 
@@ -476,29 +472,12 @@
         }).play();
     </script> -->
 
-    <!-- 基于js的点击事件 -->
     <script>
-        $("#website_board").on("click", function (ev) {
-            ev.target.tagName !== "A" &&
-                window.open("https://board.yang-qwq.top/", "_self");
-        });
-
-        $("#website_block_server_wiki").on("click", function (ev) {
-            ev.target.tagName !== "A" &&
-                window.open("./block-server-wiki/", "_self");
-        });
-
-        $("#website_status").on("click", function (ev) {
-            ev.target.tagName !== "A" &&
-                window.open(
-                    "https://stats.uptimerobot.com/kKoX9ukrwm",
-                    "_blank"
-                );
-        });
-
-        $("#cloudreve").on("click", function (ev) {
-            ev.target.tagName !== "A" &&
-                window.open("http://cloudreve.yang-qwq.top/", "_blank");
+        // 为所有具有 data-click-href 属性的 div 添加点击事件
+        $("[data-click-href]").on("click", function (ev) {
+            if (ev.target.tagName !== "A") {
+                window.open($(this).data("click-href"), "_blank");
+            }
         });
     </script>
 </body>
