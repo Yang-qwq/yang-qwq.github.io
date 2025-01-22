@@ -52,6 +52,11 @@
   .blogtitle {
     width: 95%;
   }
+
+  /* 移动端不显示 */
+  .deng-box {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -82,8 +87,10 @@
   }
 
   .siteinfo-box {
-    flex: 1 1 calc(50% - 10px); /* 每个盒子尝试占据一行的一半宽度减去一些间隙 */
-    margin: 0.5rem 5px; /* 统一外边距 */
+    flex: 1 1 calc(50% - 10px);
+    /* 每个盒子尝试占据一行的一半宽度减去一些间隙 */
+    margin: 0.5rem 5px;
+    /* 统一外边距 */
     padding: 0px 0.5rem;
     border-radius: 0.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -91,13 +98,16 @@
   }
 
   .siteinfo-box:nth-child(3) {
-    flex: 1 1 calc(50% - 10px); /* 第三个盒子与第一个盒子宽度相同 */
-    margin: 0.5rem 5px; /* 调整外边距以确保居中显示 */
+    flex: 1 1 calc(50% - 10px);
+    /* 第三个盒子与第一个盒子宽度相同 */
+    margin: 0.5rem 5px;
+    /* 调整外边距以确保居中显示 */
   }
 
   .sites-contair::after {
     content: "";
-    flex: 1 1 calc(50% - 10px); /* 添加一个透明的伪元素以填充剩余空间 */
+    flex: 1 1 calc(50% - 10px);
+    /* 添加一个透明的伪元素以填充剩余空间 */
   }
 
   /* .blogtitle {
