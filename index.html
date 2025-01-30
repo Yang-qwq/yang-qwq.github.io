@@ -290,7 +290,6 @@
                         </ul>
                         <hr />
 
-                        <!-- 这里有计划改成动态加载 -->
                         <h2>看过的番剧</h2>
                         <div class="bangumibox">
                             <div class="bangumi-card">
@@ -338,6 +337,7 @@
                                 <p>别当欧尼酱了！</p>
                             </div>
                         </div>
+                        <button id="bangumibox-load-more-button">加载更多</button>
                         <hr />
 
                         <h2>工具箱</h2>
@@ -531,6 +531,31 @@
             if (ev.target.tagName !== "A") {
                 window.open($(this).data("click-href"), "_blank");
             }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.bangumi-card');
+            let maxVisible = 3; // 初始显示的卡片数量
+            const increment = 3; // 每次点击“加载更多”时增加的卡片数量
+
+            // 初始化，隐藏超过初始可见数量的卡片
+            cards.forEach((card, index) => {
+                if (index >= maxVisible) card.style.display = 'none';
+            });
+
+            // 点击加载更多按钮时的处理
+            document.getElementById('bangumibox-load-more-button').addEventListener('click', function () {
+                const currentlyHidden = Array.from(cards).filter(card => card.style.display === 'none');
+                currentlyHidden.slice(0, increment).forEach(card => card.style.display = ''); // 显示更多卡片
+                maxVisible += increment;
+
+                // 如果没有更多要显示的卡片，隐藏按钮
+                if (currentlyHidden.length <= increment) {
+                    this.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>

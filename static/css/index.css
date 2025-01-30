@@ -350,3 +350,17 @@ aside_content .card-info .author-info__description {
 .cal-switcher {
     font-size: initial !important;
 }
+
+.blur-bottom {
+    position: relative;
+}
+
+.blur-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, white);
+}
