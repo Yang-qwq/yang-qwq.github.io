@@ -55,6 +55,13 @@
 
 <body>
     <div id="body-wrap">
+        <div class="header-tip">
+            <div class="header-tip-content">
+                <span>📢我正打算将这个项目使用新框架重写，尽情期待~</span>
+                <button class="header-tip-close" onclick="$('.header-tip').remove();">
+                    关闭
+            </div>
+        </div>
         <div class="head_container not_index_bg">
             <div id="page_site-info">
                 <div id="site-title">
@@ -497,19 +504,23 @@
 
     <!-- 标题Typed -->
     <script async>
+        // 随机排序typed字符串
+        const typedStrings = [
+            "阳的个人站",
+            "一个正在编程路上摸爬滚打的人",
+            "Yang yyds!",
+            'echo "Hello, World!"',
+            "记得常去友链里看看",
+            "别忘了给我留言！",
+            "欸嘿是什么意思啊？",
+            "你干嘛，哎呦~",
+            "逸一时，误一世，逸久逸久罢已龄",
+            "「我梦见一片焦土，一株破土而生的新蕊，它迎着朝阳绽放，向我低语呢喃。」"
+        ].sort(() => Math.random() - 0.5);
+
+        // 初始化Typed.js
         new Typed(".typed", {
-            strings: [
-                "阳的个人站",
-                "一个正在编程路上摸爬滚打的人",
-                "Yang yyds!",
-                'echo "Hello, World!"',
-                "记得常去友链里看看",
-                "别忘了给我留言！",
-                "欸嘿是什么意思啊？",
-                "你干嘛，哎呦~",
-                "逸一时，误一世，逸久逸久罢已龄",
-                "「我梦见一片焦土，一株破土而生的新蕊，它迎着朝阳绽放，向我低语呢喃。」"
-            ],
+            strings: typedStrings,
             startDelay: 300,
             typeSpeed: 85,
             loop: true,
