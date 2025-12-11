@@ -24,7 +24,9 @@
         crossorigin="anonymous" />
 
     <!-- 灯笼css -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://github.yang-qwq.top/deng/deng.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://github.yang-qwq.top/deng/deng.css">
+
+    <!-- 仅供测试使用 -->
     <!-- <link rel="stylesheet" type="text/css" href="../deng/deng.css"> -->
 
     <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" crossorigin="anonymous" />
@@ -228,14 +230,6 @@
                                 </h2>
                                 <p>在这里查看所有服务器以及站点的状态</p>
                             </div>
-
-                            <!-- <div role="navigation" class="siteinfo-box" style="background-color: rgb(65, 125, 255)" data-click-href="">
-                                <h2>
-                                    <a href="https://cloudreve.yang-qwq.top/" target="_blank"
-                                        rel="noopener noreferrer">我的私人网盘</a>
-                                </h2>
-                                <s>你或许可以试着进一下？</s>
-                            </div> -->
                         </div>
                         <hr />
 
@@ -409,7 +403,7 @@
                                 rel="noopener noreferrer">戳泡泡</a>
                             <a href="https://www.yikm.net/" target="_blank" rel="noopener noreferrer">小霸王游戏</a>
                             <a href="https://www.4399.com/" target="_blank" rel="noopener noreferrer">4399小游♂戏</a>
-                            <a href="http://www.iyinghua.io/" target="_blank" rel="noopener noreferrer">樱花动漫</a>
+                            <!-- <a href="http://www.iyinghua.io/" target="_blank" rel="noopener noreferrer">樱花动漫</a> -->
                         </div>
                     </div>
                 </article>
@@ -417,7 +411,7 @@
         </main>
         <footer id="footer">
             <!-- 灯笼1 -->
-            <!-- <div class="deng-box deng-box-left">
+            <div class="deng-box deng-box-left" style="display: none;">
                 <div class="deng">
                     <div class="xian"></div>
                     <div class="deng-a">
@@ -430,10 +424,10 @@
                         <div class="shui-b"></div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!-- 灯笼2 -->
-            <!-- <div class="deng-box deng-box-right">
+            <div class="deng-box deng-box-right" style="display: none;">
                 <div class="deng">
                     <div class="xian"></div>
                     <div class="deng-a">
@@ -446,7 +440,7 @@
                         <div class="shui-b"></div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div id="footer-wrap">
                 <div class="copyright">
                     &copy;Yang 2019 - 2024 | Powered by
@@ -487,7 +481,7 @@
     <script async src="https://github.yang-qwq.top/CDN-for-itrhx.com/js/maodian.js" crossorigin="anonymous"></script>
 
     <!-- 雪花 -->
-    <!-- <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script>
 
     <!-- 初始化计时器 -->
     <script async>
@@ -548,13 +542,39 @@
     </script>
 
     <!-- 启动雪花 -->
-    <!-- <script async>
-        new SnowScene('main', {
-            color: '#ffffff', // 雪花颜色 (默认 #ffffff)
-            volumn: 800, // 雪花数量/强度 (默认 300)
-        }).play();
-    </script> -->
+    <script async>
+        // 如果当前月份是12月到次年2月，则启用雪花效果
+        const currentMonth = new Date().getMonth() + 1; // getMonth() 返回0-11
+        if (currentMonth === 12 || currentMonth <= 2) {
+            new SnowScene('main', {
+                color: '#ffffff', // 雪花颜色 (默认 #ffffff)
+                volumn: 800, // 雪花数量/强度 (默认 300)
+            }).play();
+        }
+    </script>
 
+    <script async>
+        // 如果当前时间是农历小年到正月十五，则启用灯笼效果
+        function isInLunarNewYearPeriod() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const lunarNewYearStart = new Date(year, 0, 21); // 小年大约在1月21日左右
+            const lunarNewYearEnd = new Date(year, 1, 15); // 正月十五大约在2月15日左右
+
+            return now >= lunarNewYearStart && now <= lunarNewYearEnd;
+
+            // 测试用，强制显示灯笼
+            // return true
+        }
+
+        // 显示或隐藏灯笼
+        if (isInLunarNewYearPeriod()) {
+            document.querySelectorAll('.deng-box').forEach(function (element) {
+                element.style.display = 'block';
+            });
+        }
+
+    </script>
     <script>
         // 为所有具有 data-click-href 属性的 div 添加点击事件
         $("[data-click-href]").on("click", function (ev) {

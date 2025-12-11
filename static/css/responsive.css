@@ -55,7 +55,7 @@
 
   /* 移动端不显示 */
   .deng-box {
-    display: none;
+    display: none !important;
   }
 }
 
