@@ -1,0 +1,25 @@
+/* 自定义用户光标 */
+/* https://www.bilibili.com/video/BV11R4y1e7EL */
+
+body {
+  cursor: url("../cursor/ezgif.com-gif-maker\ \(28\).gif"), default;
+}
+
+a {
+  cursor: url("../cursor/ezgif.com-gif-maker\ \(4\).gif"), pointer;
+}
+
+.box,
+.aplayer-pic,
+.aplayer-bar,
+.aplayer-info svg,
+.aplayer-volume-bar-wrap,
+.aplayer-list li,
+.aplayer-list-author,
+.aplayer-list-index {
+  cursor: url("../cursor/ezgif.com-gif-maker\ \(4\).gif"), pointer !important;
+}
+
+.cursor-deny {
+  cursor: url("../cursor/ezgif.com-gif-maker\ \(6\).gif"), not-allowed;
+}
