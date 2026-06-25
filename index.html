@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="阳的小站">
+  <meta name="keywords" content="个人主页,动漫,二次元,阳,阳-占位符,Yang-qwq">
+  <meta name="author" content="Yang-qwq">
+  <link rel="canonical" href="https://yang.march7th.cn/">
+  <meta property="og:title" content="Yang-qwq">
+  <meta property="og:description" content="阳的小站">
+  <meta property="og:image" content="https://yang.march7th.cn/static/img/head.webp">
+  <meta property="og:url" content="https://yang.march7th.cn/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <!-- <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yang-qwq">
+  <meta name="twitter:description" content="阳的小站">
+  <meta name="twitter:image" content="https://yang.march7th.cn/static/img/head.webp">
+  <meta name="twitter:site" content="@yang_qwq"> -->
+  <title>Yang-qwq</title>
+  <link rel="icon" href="static/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=LXGW+WenKai&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  <link rel="stylesheet" href="https://github.yang-qwq.top/deng/deng.css">
+  <link rel="stylesheet" href="static/css/cursor.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/responsive.css">
+  <link rel="stylesheet" href="static/css/dark.css">
+</head>
+
+<body>
+
+  <!-- ===== Journal Cover ===== -->
+  <header class="journal-cover">
+    <div class="tape tape-t tape-pink"></div>
+    <h1 class="cover-title" id="cover-title">阳的小站</h1>
+    <p class="cover-subtitle"><span id="typed-subtitle"></span></p>
+    <div class="tape tape-b tape-blue"></div>
+    <div class="cover-stamp" id="cover-stamp">PERSONAL</div>
+
+    <div class="deng-box deng-box-left" style="display:none">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"></div>
+        </div>
+        <div class="deng-t">福</div>
+      </div>
+    </div>
+    <div class="deng-box deng-box-right" style="display:none">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"></div>
+        </div>
+        <div class="deng-t">福</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Journal Pages ===== -->
+  <main class="journal">
+
+    <!-- 1. User -->
+    <article class="card w-half r1n paper-photo card-user">
+      <div class="tape tape-t tape-blue"></div>
+      <div class="user-card-inner">
+        <div class="user-card-avatar">
+          <div class="polaroid" style="max-width:180px">
+            <img id="user-avatar" src="static/img/head.webp" alt="avatar" width="200" height="200">
+          </div>
+        </div>
+        <div class="user-card-info">
+          <div class="user-name-row">
+            <h2 class="user-name" id="user-name">阳</h2>
+            <span class="user-subname" id="user-subname"></span>
+          </div>
+          <p class="user-bio" id="user-bio">哪怕命运已定格成书，空白的那一页，也等你落笔。</p>
+          <div class="socials" id="user-socials">Loading...</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Quote / Hitokoto -->
+    <article class="card w-half r1 paper-lined">
+      <div class="tape tape-corner-tr tape-pink"></div>
+      <div class="clip"></div>
+      <blockquote>
+        <p class="quote-text" id="hitokoto">Loading...</p>
+        <footer class="quote-from" id="hitokoto-from">— Loading...</footer>
+      </blockquote>
+    </article>
+
+    <!-- 3. Poem / Jinrishici -->
+    <article class="card w-half r2 paper-grid">
+      <div class="tape tape-t tape-green"></div>
+      <h4 class="poem-title" id="poem-title">Loading...</h4>
+      <div class="poem-content" id="poem-content">
+        <p>Loading...</p>
+      </div>
+      <cite class="poem-author" id="poem-author">Loading...</cite>
+    </article>
+
+    <!-- 4. Site Info -->
+    <article class="card w-half r1n paper-sticky">
+      <div class="pin"></div>
+      <h4><i class="bi bi-bar-chart"></i> 站点信息</h4>
+      <dl class="info-list">
+        <dt>已运行</dt>
+        <dd><span id="run-days">...</span></dd>
+        <dt>访问量</dt>
+        <dd><span id="busuanzi_value_site_pv">0</span></dd>
+        <dt>文章数</dt>
+        <dd><span id="busuanzi_value_site_uv">0</span></dd>
+      </dl>
+    </article>
+
+    <!-- 5. About Me -->
+    <article class="card w-full r0 paper-kraft">
+      <h4><i class="bi bi-info-circle"></i> 关于我</h4>
+      <p class="about-intro" id="about-intro">Loading...</p>
+      <div class="tags" id="about-tags">Loading...</div>
+    </article>
+
+    <!-- 6. Music -->
+    <article class="card w-half r1 paper-photo">
+      <div class="tape tape-t tape-pink"></div>
+      <h4><i class="bi bi-music-note-beamed"></i> 听歌</h4>
+      <div id="music-player" style="margin-top:6px"></div>
+    </article>
+
+    <!-- 7. Anime -->
+    <article class="card w-half r1n paper-white">
+      <div class="tape tape-t tape-blue"></div>
+      <div class="clip"></div>
+      <h4><i class="bi bi-film"></i> 看过的番剧</h4>
+      <div class="anime-grid" id="anime-grid">
+        <div class="anime-grid-main" id="anime-grid-main"></div>
+        <div class="anime-strip" id="anime-strip"></div>
+      </div>
+      <div id="anime-toggle"></div>
+    </article>
+
+    <!-- 8. Tools -->
+    <article class="card w-half r1n paper-index" id="card-tools">
+      Loading...
+    </article>
+
+    <!-- 9. Fun -->
+    <article class="card w-half r2n paper-brown" id="card-fun">
+      <div class="tape tape-corner-tl tape-yellow"></div>
+      Loading...
+    </article>
+
+    <!-- 10. Games -->
+    <article class="card w-full r0 paper-index">
+      <div class="tape tape-t tape-blue"></div>
+      <h4><i class="bi bi-joystick"></i> 我喜欢的游戏</h4>
+      <div class="games-grid" id="games-grid"></div>
+    </article>
+
+    <!-- 11. Subsites -->
+    <article class="card w-full r0 paper-white">
+      <div class="tape tape-t tape-green"></div>
+      <h4><i class="bi bi-globe2"></i> 子站点导航</h4>
+      <div class="subsites-grid" id="subsites-grid" style="justify-content:center">Loading...</div>
+    </article>
+
+  </main>
+
+  <!-- ===== Friends Bulletin Board ===== -->
+  <section class="friends-section">
+    <div class="friends-board">
+      <div class="pin" style="left:30px;top:10px"></div>
+      <div class="pin" style="left:70px;top:10px"></div>
+      <h4 class="friends-board-title"><i class="bi bi-star"></i> 友链 <i class="bi bi-star"></i></h4>
+      <div class="friends-row" id="friends-row">Loading...</div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-stamp" id="footer-stamp">YANG</div>
+    <p>&copy; <span id="copyright-year">2024</span> <span id="footer-name">Yang-qwq</span></p>
+    <a href="https://icp.gov.moe/?keyword=20220385" target="_blank" rel="noopener noreferrer">萌ICP备20220385号</a>
+  </footer>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" defer></script>
+  <script src="https://unpkg.com/meting@2.0.2/dist/Meting.min.js" defer></script>
+  <script src="https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+  <script>
+    window.hitokotoCallback = function (raw) {
+      var data = JSON.parse(raw);
+      var el = document.getElementById('hitokoto');
+      var fromEl = document.getElementById('hitokoto-from');
+      if (el) el.textContent = data.hitokoto;
+      if (fromEl) fromEl.textContent = '— ' + (data.from_who || data.from || '一言');
+    };
+  </script>
+  <script async src="https://v1.hitokoto.cn/?encode=json&callback=hitokotoCallback" crossorigin="anonymous"></script>
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
+  <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var m = new Date().getMonth() + 1;
+      if (m === 12 || m <= 2) {
+        new SnowScene('main', {
+          color: '#ffffff',
+          volume: 800,
+        }).play();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function isInLunarNewYearPeriod() {
+        var now = new Date();
+        var y = now.getFullYear();
+        var start = new Date(y, 0, 21);
+        var end = new Date(y, 1, 15);
+        return now >= start && now <= end;
+      }
+      if (isInLunarNewYearPeriod()) {
+        document.querySelectorAll('.deng-box').forEach(function (el) {
+          el.style.display = 'block';
+        });
+      }
+    });
+  </script>
+  <script>
+    (function () {
+      var prevTitle = document.title;
+      var titleTime;
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          prevTitle = document.title;
+          document.title = '\u256d(\u00b0A\u00b0`)\u256e \u9875\u9762\u5d29\u6e83\u5566 ~';
+          clearTimeout(titleTime);
+        } else {
+          document.title = '(\u0e3f>\u03c9<*\u0e3f) \u5662\u53c8\u597d\u5566 ~' + prevTitle;
+          titleTime = setTimeout(function () {
+            document.title = prevTitle;
+          }, 2000);
+        }
+      });
+    })();
+  </script>
+  <script src="static/js/data.js" defer></script>
+  <script src="static/js/timer.js" defer></script>
+  <script src="static/js/main.js" defer></script>
+</body>
+
+</html>

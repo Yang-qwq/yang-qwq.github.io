@@ -1,5 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yang-qwq.top/sitemap.xml
-Sitemap: https://luotianyi.online/sitemap.xml
+Sitemap: https://yang.march7th.cn/sitemap.xml

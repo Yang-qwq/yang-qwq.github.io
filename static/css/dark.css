@@ -1,0 +1,199 @@
+/* ===== 深色主题 =====
+ */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+    }
+
+    a {
+        color: #4a90e2;
+    }
+
+    .card {
+        background-color: #2c2c2c;
+        border-color: #444;
+    }
+
+    .journal-cover,
+    .journal,
+    .friends-section {
+        background-color: #2c2c2c;
+        border-color: #444;
+    }
+
+    .cover-title {
+        color: #eee;
+    }
+
+    .paper-brown h4 {
+        color: rgb(255, 191, 136);
+    }
+
+    .polaroid {
+        background: #393939;
+    }
+
+    .friends-board {
+        background:
+            repeating-linear-gradient(0deg,
+                transparent,
+                transparent 30px,
+                rgba(200, 184, 152, 0.12) 30px,
+                rgba(200, 184, 152, 0.12) 31px),
+            repeating-linear-gradient(90deg,
+                transparent,
+                transparent 30px,
+                rgba(200, 184, 152, 0.12) 30px,
+                rgba(200, 184, 152, 0.12) 31px),
+            #2e2e2e;
+    }
+
+    .friend-card {
+        background: #393939;
+        border: 1px solid #e0d4c2;
+    }
+
+    /* ===== Cover Stamp ===== */
+    .cover-stamp {
+        color: #c8b898;
+        border-color: #c8b898;
+        mix-blend-mode: normal;
+        opacity: 0.85;
+    }
+
+    /* ===== Paper Card Colors ===== */
+    .paper-kraft {
+        color: #e0d8cc;
+    }
+
+    .paper-brown {
+        color: #e0d8cc;
+    }
+
+    /* ===== Text Readability ===== */
+    .cover-subtitle,
+    .polaroid-caption,
+    .game-desc,
+    .link-group-title,
+    .friends-board-title,
+    .divider {
+        color: #c8b898;
+    }
+
+    .card-quote .quote-text {
+        color: #e0d8cc;
+    }
+
+    .card-quote .quote-from,
+    .user-subname,
+    .user-bio,
+    .socials a,
+    .info-list dt,
+    .music-artist,
+    .poem-author,
+    .friend-desc,
+    .typed-cursor {
+        color: #b8a898;
+    }
+
+    .about-intro {
+        color: #e0d8cc;
+    }
+
+    /* ===== Tags ===== */
+    .tag {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #555;
+        color: #c8b898;
+    }
+
+    /* ===== Subsite & Link Grid ===== */
+    .subsite-link,
+    .link-grid a {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: #555;
+    }
+
+    .subsite-link:hover,
+    .link-grid a:hover {
+        background: #3a3a3a;
+    }
+
+    /* ===== Buttons ===== */
+    .anime-toggle-btn,
+    .copy-uid-btn {
+        color: #c8b898;
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #555;
+    }
+
+    .anime-toggle-btn:hover,
+    .copy-uid-btn:hover {
+        background: #3a3a3a;
+    }
+
+    /* ===== Toast ===== */
+    .toast {
+        color: #f0f0f0;
+        background: #2c2c2c;
+        border-color: #444;
+        border-top-color: #c8b898;
+    }
+
+    /* ===== APlayer ===== */
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar {
+        background: #444;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+        background: #555;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+        background: #c8b898;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-time {
+        color: #b8a898;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-play,
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-pause {
+        color: #b8a898;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+        background: #444;
+    }
+
+    #music-player .aplayer .aplayer-info .aplayer-control .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+        background: #c8b898;
+    }
+
+    #music-player .aplayer .aplayer-list {
+        border-top-color: #444;
+    }
+
+    #music-player .aplayer .aplayer-list ol li {
+        border-bottom-color: #444;
+        color: #c0b8a8;
+    }
+
+    #music-player .aplayer .aplayer-list ol li:hover {
+        background: #3a3a3a;
+    }
+
+    #music-player .aplayer .aplayer-list ol li.aplayer-list-light {
+        background: #3a3a3a;
+    }
+
+    #music-player .aplayer .aplayer-list ol li .aplayer-list-index {
+        color: #888;
+    }
+
+    #music-player .aplayer .aplayer-list ol li .aplayer-list-author {
+        color: #b8a898;
+    }
+}

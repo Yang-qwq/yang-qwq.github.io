@@ -1,4 +1,10 @@
-// 正计时函数
+/**
+ * ===== 计时工具函数 =====
+ * 供 HTML 中内联调用，实现正计时 / 倒计时展示。
+ * ascTime(time, id) — 从指定时间到现在的正计时
+ * descTime(time, id) — 从现在到指定时间的倒计时
+ */
+
 function ascTime(time, id) {
     // e.g. '2021-12-19 08:00:00';
     let startTime = new Date(time).getTime();

@@ -1,0 +1,119 @@
+/* ===== 响应式样式 =====
+ * 从 style.css 中抽离，按断点分组。
+ * 断点:  ≤540px(小手机)  ≤640px(手机)  641-860px(平板)  ≥861px(桌面)
+ */
+
+/* --- desktop 60% width --- */
+@media (min-width: 861px) {
+  .journal-cover {
+    width: 60%;
+    max-width: none;
+  }
+
+  .journal {
+    width: 60%;
+    max-width: none;
+  }
+
+  .friends-section {
+    width: 60%;
+    max-width: none;
+  }
+}
+
+/* --- small desktop cover stamp --- */
+@media (max-width: 540px) {
+  .cover-stamp {
+    display: none;
+  }
+}
+
+/* --- tablet (641-860px) half-card spacing --- */
+@media (min-width: 641px) and (max-width: 860px) {
+  .card:nth-child(odd of .w-half) {
+    margin-right: 4px;
+  }
+
+  .card:nth-child(even of .w-half) {
+    margin-left: 4px;
+  }
+}
+
+/* --- mobile (≤640px) --- */
+@media (max-width: 640px) {
+  .journal-cover {
+    margin: 20px 10px 10px;
+    padding: 20px 16px;
+  }
+
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .journal {
+    padding: 0 8px 20px;
+  }
+
+  .card {
+    margin: 8px;
+    padding: 16px;
+  }
+
+  .w-half {
+    width: calc(100% - 20px);
+  }
+
+  .anime-grid-main .polaroid {
+    width: 100%;
+  }
+
+  .anime-strip .polaroid {
+    width: 90px;
+  }
+
+  .friend-desc {
+    display: none;
+  }
+
+  .user-card-inner {
+    flex-direction: column;
+  }
+
+  .user-card-avatar {
+    width: 100%;
+  }
+
+  .game-item {
+    width: calc(50% - 10px);
+    min-width: 0;
+    max-width: none;
+  }
+
+  /* cards 6+ remove rotation */
+  .journal>.card:nth-child(n+6) {
+    transform: rotate(0deg) !important;
+  }
+
+  .user-card-info .socials {
+    justify-content: center;
+  }
+}
+
+/* --- very small screens (≤400px) --- */
+@media (max-width: 400px) {
+  .w-full {
+    width: calc(100% - 16px);
+  }
+
+  .w-half {
+    width: calc(100% - 16px);
+  }
+
+  .card {
+    margin: 8px 8px;
+  }
+
+  .user-card-info .socials {
+    justify-content: center;
+  }
+}

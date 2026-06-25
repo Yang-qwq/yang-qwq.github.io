@@ -1,0 +1,1004 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Paper Grain Texture ===== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+}
+
+body {
+  font-family: 'LXGW WenKai', 'Caveat', cursive, sans-serif;
+  background: #efe7d6;
+  color: #3a2c1b;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Journal Cover Header ===== */
+.journal-cover {
+  max-width: 860px;
+  margin: 40px auto 10px;
+  padding: 30px 24px;
+  background: #f5ede0;
+  border: 1px solid #e0d4c2;
+  position: relative;
+  text-align: center;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cover-title {
+  font-family: 'Caveat', cursive;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #3a2c1b;
+  position: relative;
+  display: inline-block;
+}
+
+.cover-subtitle {
+  font-size: 0.92rem;
+  color: #8c7a6a;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.cover-stamp {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(12deg);
+  width: 50px;
+  height: 50px;
+  border: 3px double #b8a088;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #b8a088;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+}
+
+/* ===== Journal Container ===== */
+.journal {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 10px 16px 30px;
+  font-size: 0;
+  text-align: center;
+  position: relative;
+}
+
+.journal::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: -6px;
+  width: 4px;
+  background: repeating-linear-gradient(to bottom,
+      #c8b898 0px,
+      #c8b898 4px,
+      transparent 4px,
+      transparent 8px);
+  opacity: 0.4;
+}
+
+/* ===== Card Base ===== */
+.card {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: left;
+  vertical-align: top;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card h5 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ===== Widths ===== */
+.w-full {
+  width: calc(100% - 20px);
+}
+
+.w-half {
+  width: calc(50% - 20px);
+}
+
+/* ===== Rotations ===== */
+.r0 {
+  transform: rotate(0deg);
+}
+
+.r1 {
+  transform: rotate(1.2deg);
+}
+
+.r1n {
+  transform: rotate(-1.2deg);
+}
+
+.r2 {
+  transform: rotate(2.4deg);
+}
+
+.r2n {
+  transform: rotate(-2.4deg);
+}
+
+.card:hover {
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Paper Backgrounds ===== */
+.paper-white {
+  background: #fcfbf9;
+  border: 1px solid #e8e0d4;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paper-lined {
+  background: #faf8f5;
+  border: 1px solid #e8e0d4;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paper-grid {
+  background-color: #f9f7f2;
+  border: 1px solid #e0d8ca;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paper-kraft {
+  background: #d9c5a8;
+  color: #3e2c1b;
+  border: 1px solid #c8b498;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+.paper-sticky {
+  background: #f5ede0;
+  border: 1px solid #e0d4c2;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paper-index {
+  background: #f7f2e8;
+  border: 1px solid #e4dbcc;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.paper-photo {
+  background: #f8f8f6;
+  padding: 10px 10px 32px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.paper-brown {
+  background: #d4b896;
+  color: #2d2417;
+  border: none;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+/* ===== Washi Tape ===== */
+.tape {
+  position: absolute;
+  height: 16px;
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tape::before,
+.tape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.tape-t {
+  top: -7px;
+  left: 15%;
+  right: 15%;
+}
+
+.tape-b {
+  bottom: -7px;
+  left: 25%;
+  right: 35%;
+}
+
+.tape-corner-tr {
+  top: -7px;
+  right: 10%;
+  left: auto;
+  width: 50px;
+}
+
+.tape-corner-tl {
+  top: -7px;
+  left: 10%;
+  right: auto;
+  width: 50px;
+}
+
+.tape-pink {
+  background: linear-gradient(180deg, #e8a0b4, #df8ca2, #e8a0b4);
+}
+
+.tape-blue {
+  background: linear-gradient(180deg, #8fb8d9, #7aa8cc, #8fb8d9);
+}
+
+.tape-green {
+  background: linear-gradient(180deg, #a8c9a8, #94bc94, #a8c9a8);
+}
+
+.tape-yellow {
+  background: linear-gradient(180deg, #f0d878, #e8cc60, #f0d878);
+}
+
+/* ===== Pin / Thumbtack ===== */
+.pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #ff8787, #d63031);
+  box-shadow: 0 2px 6px rgba(214, 48, 49, 0.4);
+  z-index: 3;
+  cursor: default;
+}
+
+.pin::before {
+  /* content: ''; */
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 10px;
+  background: #888;
+  border-radius: 1px;
+}
+
+/* ===== Paper Clip ===== */
+.clip {
+  position: absolute;
+  top: -3px;
+  right: 14px;
+  width: 10px;
+  height: 28px;
+  border: 2px solid #b0a898;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ===== Polaroid Frame ===== */
+.polaroid {
+  background: #fff;
+  padding: 8px 8px 32px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.10);
+  display: inline-block;
+  width: 100%;
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.polaroid-caption {
+  display: block;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 0.78rem;
+  color: #8c7a6a;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+.anime-toggle-wrap {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.anime-toggle-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  color: #8c7a6a;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px dashed #c8b898;
+  border-radius: 0;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.anime-toggle-btn:hover {
+  background: #e8e0d4;
+}
+
+/* ===== Scribble Divider ===== */
+.divider {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #c8b898;
+  letter-spacing: 6px;
+  margin: 6px 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ===== Card: User ===== */
+.card-user {
+  text-align: center;
+}
+
+.card-user .polaroid {
+  max-width: 200px;
+}
+
+.user-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-card-avatar {
+  flex: 0 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-card-avatar .polaroid {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.user-card-info {
+  flex: 1;
+  text-align: left;
+}
+
+.user-card-info .socials {
+  justify-content: flex-start;
+}
+
+.user-name {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+
+.user-name-row {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.user-subname {
+  font-size: 0.85rem;
+  color: #b0a090;
+  line-height: 1.6rem;
+  padding-bottom: 3px;
+}
+
+.user-bio {
+  font-size: 0.85rem;
+  color: #8c7a6a;
+  font-style: italic;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  color: #b0a090;
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: #e8a0b4;
+}
+
+/* ===== Card: Quote ===== */
+.card-quote blockquote {
+  font-style: normal;
+}
+
+.card-quote .quote-text {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a3c2b;
+}
+
+.card-quote .quote-from {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #b0a090;
+  text-align: right;
+}
+
+/* ===== Card: Poem ===== */
+.poem-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.poem-content p {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.poem-author {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: #b0a090;
+  text-align: right;
+}
+
+/* ===== Card: Site Info ===== */
+.info-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  font-size: 0.88rem;
+}
+
+.info-list dt {
+  color: #b0a090;
+}
+
+.info-list dd {
+  font-weight: 500;
+}
+
+/* ===== Card: About ===== */
+.about-intro {
+  font-size: 0.9rem;
+  color: #4a3c2b;
+  line-height: 1.9;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 12px;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #c8b898;
+  border-radius: 0;
+  color: #6a5c4b;
+}
+
+/* ===== Card: Music ===== */
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.music-card .polaroid-mini {
+  width: 60px;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 4px 4px 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.music-card .polaroid-mini img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.music-song {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.music-artist {
+  font-size: 0.8rem;
+  color: #b0a090;
+  margin-top: 2px;
+}
+
+/* ===== Card: Anime ===== */
+.anime-grid {
+  margin-top: 4px;
+}
+
+.anime-grid-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.anime-grid-main .polaroid {
+  width: calc(50% - 5px);
+  padding: 6px 6px 24px;
+}
+
+.anime-grid-main .polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.anime-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0 6px;
+  margin-top: 10px;
+  border-top: 1px dashed #d8ccba;
+  scrollbar-width: thin;
+}
+
+.anime-strip .polaroid {
+  flex-shrink: 0;
+  width: 110px;
+  padding: 5px 5px 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.anime-strip .polaroid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.anime-strip .polaroid-caption {
+  font-size: 0.72rem;
+  margin-top: 4px;
+}
+
+.anime-strip.collapsed {
+  display: none;
+}
+
+/* ===== Card: Games ===== */
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.game-item {
+  width: calc(33.33% - 12px);
+  min-width: 160px;
+  max-width: 260px;
+}
+
+.game-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.game-link:hover .polaroid {
+  transform: scale(1.03);
+}
+
+.game-item .polaroid {
+  width: 100%;
+  padding: 6px 6px 22px;
+  transition: transform 0.2s ease;
+}
+
+.game-item .polaroid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.game-desc {
+  font-size: 0.78rem;
+  color: #8c7a6a;
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.copy-uid-btn {
+  display: block;
+  margin: 6px auto 0;
+  font-family: 'Caveat', cursive;
+  font-size: 0.78rem;
+  color: #8c7a6a;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px dashed #c8b898;
+  border-radius: 0;
+  padding: 2px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-uid-btn:hover {
+  background: #e8e0d4;
+}
+
+/* ===== Card: Link Groups ===== */
+.link-group {
+  margin-bottom: 10px;
+}
+
+.link-group:last-child {
+  margin-bottom: 0;
+}
+
+.link-group-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #8c7a6a;
+  margin-bottom: 5px;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.link-grid a {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid #e0d4c2;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.link-grid a:hover {
+  background: #e8e0d4;
+}
+
+/* ===== Card: Subsites ===== */
+.subsites-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subsite-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px dashed #c8b898;
+  transition: background 0.2s;
+}
+
+.subsite-link i {
+  font-size: 0.95rem;
+}
+
+.subsite-link:hover {
+  background: #e8e0d4;
+}
+
+/* ===== Friends: Bulletin Board ===== */
+.friends-section {
+  max-width: 860px;
+  margin: 0 auto 30px;
+  padding: 20px 16px;
+}
+
+.friends-board {
+  background:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 30px,
+      rgba(200, 184, 152, 0.12) 30px,
+      rgba(200, 184, 152, 0.12) 31px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 30px,
+      rgba(200, 184, 152, 0.12) 30px,
+      rgba(200, 184, 152, 0.12) 31px),
+    #f0e8d8;
+  border: 1px solid #d8ccba;
+  padding: 24px 20px 20px;
+  position: relative;
+}
+
+.friends-board-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8c7a6a;
+  margin-bottom: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.friends-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.friend-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f5f0e8;
+  border: 1px solid #e0d4c2;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.friend-card:hover {
+  transform: translateY(-3px);
+}
+
+.friend-card .pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+}
+
+.friend-card .pin::before {
+  top: -7px;
+  height: 8px;
+}
+
+.friend-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.friend-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.friend-desc {
+  font-size: 0.72rem;
+  color: #b0a090;
+  white-space: nowrap;
+}
+
+/* ===== APlayer inside card ===== */
+#music-player .aplayer {
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: inherit;
+  background: transparent;
+}
+
+#music-player .aplayer .aplayer-pic {
+  border-radius: 0;
+}
+
+#music-player .aplayer .aplayer-info {
+  border-bottom: none;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-music {
+  font-family: 'LXGW WenKai', sans-serif;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control {
+  align-items: center;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap {
+  margin: 0 4px;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar {
+  height: 4px;
+  background: #e0d4c2;
+  border-radius: 0;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+  background: #d0c4b2;
+  border-radius: 0;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  background: #c8b898;
+  border-radius: 0;
+  height: 4px;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+  display: none;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-time {
+  font-family: 'LXGW WenKai', sans-serif;
+  font-size: 0.78rem;
+  color: #b0a090;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-play,
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-pause {
+  color: #8c7a6a;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+  border-radius: 0;
+  background: #e0d4c2;
+}
+
+#music-player .aplayer .aplayer-info .aplayer-control .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+  border-radius: 0;
+  background: #c8b898;
+}
+
+#music-player .aplayer .aplayer-list {
+  border: none;
+  border-top: 1px dashed #d8ccba;
+}
+
+#music-player .aplayer .aplayer-list ol li {
+  border-bottom: 1px dashed #e8e0d4;
+  font-family: 'LXGW WenKai', sans-serif;
+  font-size: 0.82rem;
+  color: #6a5c4b;
+}
+
+#music-player .aplayer .aplayer-list ol li:hover {
+  background: #f5ede0;
+}
+
+#music-player .aplayer .aplayer-list ol li.aplayer-list-light {
+  background: #ede4d4;
+}
+
+#music-player .aplayer .aplayer-list ol li .aplayer-list-index {
+  color: #c8b898;
+}
+
+#music-player .aplayer .aplayer-list ol li .aplayer-list-author {
+  color: #b0a090;
+}
+
+/* ===== Typed.js cursor ===== */
+.typed-cursor {
+  color: #8c7a6a;
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: #3a2c1b;
+  background: #faf8f5;
+  border: 1px solid #d8ccba;
+  border-top: 3px solid #c8b898;
+  padding: 10px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* ===== Footer: Stamp ===== */
+.footer {
+  text-align: center;
+  padding: 10px 20px 40px;
+  font-size: 0.78rem;
+  color: #c8b898;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-stamp {
+  display: inline-block;
+  border: 2px solid #d8ccba;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 0.65rem;
+  color: #c8b898;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
