@@ -23,11 +23,14 @@
   <link rel="icon" href="static/img/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=LXGW+WenKai&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <link rel="stylesheet" href="https://github.yang-qwq.top/deng/deng.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=LXGW+WenKai&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=LXGW+WenKai&display=swap"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css"></noscript>
+  <link rel="stylesheet" href="https://github.yang-qwq.top/deng/deng.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://github.yang-qwq.top/deng/deng.css"></noscript>
   <link rel="stylesheet" href="static/css/cursor.css">
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/responsive.css">
@@ -100,7 +103,7 @@
     <!-- 3. Poem / Jinrishici -->
     <article class="card w-half r2 paper-grid">
       <div class="tape tape-t tape-green"></div>
-      <h4 class="poem-title" id="poem-title">Loading...</h4>
+      <h3 class="poem-title" id="poem-title">Loading...</h3>
       <div class="poem-content" id="poem-content">
         <p>Loading...</p>
       </div>
@@ -209,15 +212,17 @@
   </script>
   <script async src="https://v1.hitokoto.cn/?encode=json&callback=hitokotoCallback" crossorigin="anonymous"></script>
   <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
-  <script src="https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js" crossorigin="anonymous"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var m = new Date().getMonth() + 1;
       if (m === 12 || m <= 2) {
-        new SnowScene('main', {
-          color: '#ffffff',
-          volume: 800,
-        }).play();
+        var s = document.createElement('script');
+        s.src = 'https://unpkg.com/snowflakesjs@1.0.2/dist/snowflakes.bundle.min.js';
+        s.crossOrigin = 'anonymous';
+        s.onload = function () {
+          new SnowScene('main', { color: '#ffffff', volume: 800 }).play();
+        };
+        document.body.appendChild(s);
       }
     });
   </script>

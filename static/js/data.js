@@ -59,9 +59,9 @@ var SITE_DATA = {
     id: '7123866465',           // 歌单/歌曲 ID
   },
 
-  /* ----- 番剧列表 (支持对象 { src, name } 或纯文件名) ----- */
+  /* ----- 番剧列表 (支持对象 { src, name, alt? } 或纯文件名) ----- */
   anime: [
-    { src: '00000001.jpg', name: '莉可丽丝/铳动彼岸花' },
+    { src: '00000001.jpg', name: '莉可丽丝 / 铳动彼岸花' },
     { src: '093302de.jpg', name: '别当欧尼酱了！' },
     { src: '24335806.jpg', name: '我推的孩子' },
     { src: '2cf8a6e9.jpg', name: '鹿乃子乃子乃子虎视眈眈' },
@@ -112,7 +112,7 @@ var SITE_DATA = {
     },
   ],
 
-  /* ----- 我喜欢的游戏 ----- */
+  /* ----- 我喜欢的游戏 (支持 { name, cover, desc, url, alt?, uid? } ) ----- */
   games: [
     {
       name: 'Minecraft',

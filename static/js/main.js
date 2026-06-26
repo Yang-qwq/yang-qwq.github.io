@@ -4,23 +4,24 @@
  * 所有文案配置见 data.js。
  */
 
-try { initPageTitle(); } catch (e) { console.warn(e); }
-try { initCoverTitle(); } catch (e) { console.warn(e); }
-try { initUser(); } catch (e) { console.warn(e); }
-try { initAbout(); } catch (e) { console.warn(e); }
-try { initFooterName(); } catch (e) { console.warn(e); }
-try { initPoem(); } catch (e) { console.warn(e); }
-try { initMusic(); } catch (e) { console.warn(e); }
-try { initQuote(); } catch (e) { console.warn(e); }
-try { initAnime(); } catch (e) { console.warn(e); }
-try { initCategories(); } catch (e) { console.warn(e); }
-try { initSubsites(); } catch (e) { console.warn(e); }
-try { initFriends(); } catch (e) { console.warn(e); }
-try { setInterval(function () { ascTime(SITE_DATA.siteInfo.startDate, document.getElementById('run-days')); }, 1000); } catch (e) { console.warn(e); }
-try { initGames(); } catch (e) { console.warn(e); }
-try { initAnimeToggle(); } catch (e) { console.warn(e); }
-try { initTyped(); } catch (e) { console.warn(e); }
-try { initJinrishici(); } catch (e) { console.warn(e); }
+try { initPageTitle(); } catch (e) { console.error(e); }
+try { initCoverTitle(); } catch (e) { console.error(e); }
+try { initUser(); } catch (e) { console.error(e); }
+try { initAbout(); } catch (e) { console.error(e); }
+try { initFooterName(); } catch (e) { console.error(e); }
+try { initPoem(); } catch (e) { console.error(e); }
+try { initMusic(); } catch (e) { console.error(e); }
+try { initQuote(); } catch (e) { console.error(e); }
+try { initAnime(); } catch (e) { console.error(e); }
+try { initCategories(); } catch (e) { console.error(e); }
+try { initSubsites(); } catch (e) { console.error(e); }
+try { initFriends(); } catch (e) { console.error(e); }
+try { setInterval(function () { ascTime(SITE_DATA.siteInfo.startDate, document.getElementById('run-days')); }, 1000); } catch (e) { console.error(e); }
+try { initGames(); } catch (e) { console.error(e); }
+try { initAnimeToggle(); } catch (e) { console.error(e); }
+try { initTyped(); } catch (e) { console.error(e); }
+try { initJinrishici(); } catch (e) { console.error(e); }
+try { initAplayerAria(); } catch (e) { console.error(e); }
 
 function initAnimeToggle() {
   var wrap = document.getElementById('anime-toggle');
@@ -145,7 +146,7 @@ function initGames() {
       this.style.padding = '20px';
     };
     img.src = game.cover;
-    img.alt = game.name;
+    img.alt = game.alt || '';
 
     var caption = document.createElement('span');
     caption.className = 'polaroid-caption';
@@ -343,12 +344,14 @@ function initAnime() {
   anime.forEach(function (item, i) {
     var file = typeof item === 'string' ? item : item.src;
     var name = item.name || '番剧 ' + String.fromCharCode(65 + i);
+    var altText = (typeof item === 'object' && item.alt) ? item.alt : name;
     var polaroid = document.createElement('div');
     polaroid.className = 'polaroid';
 
     var img = document.createElement('img');
     img.src = 'static/img/bangumi/' + file;
     img.loading = 'lazy';
+    img.alt = altText;
     img.onerror = function () {
       this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150"><rect width="200" height="150" fill="%23f0e8d8" rx="8"/><text x="100" y="86" text-anchor="middle" fill="%23b8a088" font-size="28" font-family="sans-serif">?</text></svg>');
       this.style.objectFit = 'contain';
@@ -473,6 +476,24 @@ function initFriends() {
 
     row.appendChild(a);
   });
+}
+
+function initAplayerAria() {
+  var observer = new MutationObserver(function () {
+    var btns = document.querySelectorAll('.aplayer-icon');
+    if (btns.length === 0) return;
+    observer.disconnect();
+    btns.forEach(function (btn) {
+      if (btn.classList.contains('aplayer-icon-order') && !btn.getAttribute('aria-label')) {
+        btn.setAttribute('aria-label', '播放顺序');
+      } else if (btn.classList.contains('aplayer-icon-loop') && !btn.getAttribute('aria-label')) {
+        btn.setAttribute('aria-label', '循环模式');
+      } else if (btn.classList.contains('aplayer-icon-menu') && !btn.getAttribute('aria-label')) {
+        btn.setAttribute('aria-label', '播放列表');
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
 }
 
 function showToast(msg) {
