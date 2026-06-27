@@ -116,57 +116,57 @@ var SITE_DATA = {
   games: [
     {
       name: 'Minecraft',
-      cover: 'static/img/game/minecraft.jpg',   // 游戏封面图
+      cover: 'static/img/game/minecraft.webp',   // 游戏封面图
       desc: '创造。探索。生存。',                  // 简短描述
       url: 'https://www.minecraft.net/zh-hans',     // 点击跳转链接 
     },
     {
       name: '原神',
-      cover: 'static/img/game/genshin.jpg',
+      cover: 'static/img/game/genshin.webp',
       desc: '提瓦特大陆的冒险之旅',
       url: 'http://ys.mihoyo.com/',
     },
     {
       name: 'osu!',
-      cover: 'static/img/game/osu.jpg',
+      cover: 'static/img/game/osu.webp',
       desc: '棒到不行的免费音乐游戏',
       url: 'https://osu.ppy.sh/',
       uid: '26321853',  // 可选，有则显示「复制 UID」按钮
     },
     {
       name: 'CS2',
-      cover: 'static/img/game/cs2.jpg',
+      cover: 'static/img/game/cs2.webp',
       desc: '经典的第一人称射击游戏',
       url: 'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/',
     },
     {
       name: 'THE FINALS',
-      cover: 'static/img/game/the_finals.jpg',
+      cover: 'static/img/game/the_finals.webp',
       desc: '多人在线第一人称射击游戏',
       url: 'https://store.steampowered.com/app/2073850/THE_FINALS/',
     },
     {
       name: '崩坏：星穹铁道',
-      cover: 'static/img/game/starrail.png',
+      cover: 'static/img/game/starrail.webp',
       desc: '星穹铁道的冒险之旅',
       url: 'https://sr.mihoyo.com/',
     },
     {
       name: '赛博朋克 2077',
-      cover: 'static/img/game/2077.jpg',
+      cover: 'static/img/game/2077.webp',
       desc: '赛博朋克风格的开放世界 RPG 游戏',
       url: 'https://store.steampowered.com/app/1091500/_2077/',
     },
     {
       name: 'Blue Archive',
-      cover: 'static/img/game/blue_archive.jpg',
+      cover: 'static/img/game/blue_archive.webp',
       desc: '校园生活与战斗的结合',
       url: '#',
       uid: '16 433 367',
     },
     {
       name: '异环',
-      cover: 'static/img/game/yh.jpg',
+      cover: 'static/img/game/yh.webp',
       desc: '超自然都市开放世界RPG',
       url: 'https://yh.wanmei.com/',
     },
@@ -182,11 +182,12 @@ var SITE_DATA = {
 
   /* ----- 友链 ----- */
   friends: [
-    { name: '晚江右海的个人网站', avatar: '', url: 'https://yuxiangwang0525.com/', desc: '' },
+    { name: '晚江右海的个人网站', avatar: 'https://gh-proxy.com/https://avatars.githubusercontent.com/u/66881174', url: 'https://yuxiangwang0525.com/', desc: '' },
     { name: 'Luomoの云日常', avatar: 'https://pic.imgdb.cn/item/66af707bd9c307b7e9b98d57.jpg', url: 'https://www.march7th.cn/', desc: '' },
-    { name: '1107的小站', avatar: '', url: 'https://1107.siwg.top/', desc: '' },
+    { name: '1107的小站', avatar: 'https://gh-proxy.com/https://avatars.githubusercontent.com/u/110892358', url: 'https://1107.siwg.top/', desc: '' },
     { name: 'dsy4567的小站', avatar: 'https://dsy4567.icu/img/avatar.jpg', url: 'https://dsy4567.icu/', desc: '' },
     { name: 'HanaTaka2137的个人主页', avatar: 'https://www.xiyang6666.top/api/getAvatar', url: 'https://www.xiyang6666.top/', desc: '' },
+    { name: 'Aquarium | LiPolymer', avatar: 'https://gh-proxy.com/https://avatars.githubusercontent.com/u/110595296', url: 'https://lipoly.ink/', desc: '' },
     { name: '想添加你的友链？', avatar: 'static/img/head.webp', url: 'https://github.com/Yang-qwq/yang-qwq.github.io/issues', desc: '看这里！' },
   ],
 };
