@@ -61,14 +61,16 @@ var SITE_DATA = {
 
   /* ----- 番剧列表 (支持对象 { src, name, alt? } 或纯文件名) ----- */
   anime: [
+    { src: '1cf25f57.jpg', name: '亚托莉 -我挚爱的时光-' },
+    { src: '5ce9fed1.jpg', name: '葬送的芙莉莲' },
+    { src: '429c1b7a.jpg', name: '孤独摇滚！' },
     { src: '00000001.jpg', name: '莉可丽丝 / 铳动彼岸花' },
     { src: '093302de.jpg', name: '别当欧尼酱了！' },
+    { src: '87a60922.jpg', name: '葬送的芙莉莲 第二季' },
     { src: '24335806.jpg', name: '我推的孩子' },
     { src: '2cf8a6e9.jpg', name: '鹿乃子乃子乃子虎视眈眈' },
     { src: '3928023e.jpg', name: '赛马娘 Pretty Derby 第二季' },
-    { src: '429c1b7a.jpg', name: '孤独摇滚！' },
     { src: '54f19dde.jpg', name: '龙王的工作' },
-    { src: '5ce9fed1.jpg', name: '葬送的芙莉莲' },
     { src: '5eeebf97.jpg', name: '赛马娘 Pretty Derby Road to the Top' },
     { src: '75400af2.jpg', name: '赛马娘四格' },
     { src: 'a1f882c4.jpg', name: '你的名字。' },
