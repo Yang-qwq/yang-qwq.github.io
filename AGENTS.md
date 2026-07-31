@@ -12,7 +12,7 @@ python3 -m http.server 8000
 
 - `index.html` — skeleton with `Loading...` placeholders; every section populated at runtime by `main.js` reading `SITE_DATA` from `data.js`
 - `static/js/data.js` — single config file; edit this to change all page content
-- `static/js/main.js` — 17 `try{...}catch` init functions: `initPageTitle`, `initCoverTitle`, `initUser`, `initAbout`, `initFooterName`, `initPoem`, `initMusic`, `initQuote`, `initAnime`, `initCategories`, `initSubsites`, `initFriends`, `initGames`, `initAnimeToggle`, `initTyped`, `initJinrishici`, plus `setInterval(ascTime)` for run-day counter
+- `static/js/main.js` — 18 `try{...}catch` init calls: `initPageTitle`, `initCoverTitle`, `initUser`, `initAbout`, `initFooterName`, `initPoem`, `initMusic`, `initQuote`, `initAnime`, `initCategories`, `initSubsites`, `initFriends`, `initGames`, `initAnimeToggle`, `initTyped`, `initJinrishici`, `initAplayerAria`, plus `setInterval(ascTime)` for run-day counter
 - `static/js/timer.js` — `ascTime`/`descTime` utilities
 - `static/css/style.css` — base styles; `static/css/responsive.css` — media queries; `static/css/dark.css` — dark mode overrides (`@media prefers-color-scheme: dark`); `static/css/cursor.css` — custom cursors
 - `static/img/bangumi/*.jpg` — anime images; `static/img/game/` — placeholder (SVG fallback via `img.onerror`);
@@ -45,7 +45,8 @@ All 4 loaded in `<head>` via `<link>`. Dark mode has **no JS toggle** — purely
 | Quote fallback | `initQuote` writes `SITE_DATA.quote` only if `#hitokoto` still says `Loading...` (hitokoto JSONP `hitokotoCallback` sets via `from_who`/`from`) |
 | Poem fallback | `initPoem` sets `SITE_DATA.poem` first; `initJinrishici` overrides via `result.data.origin.title` + `result.data.origin.author` |
 | Anime toggle | First 4 in `#anime-grid-main`, rest in `#anime-strip` (collapsible); toggle button created by `initAnimeToggle` |
-| Music player | `<meting-js>` custom element created dynamically by `initMusic()` from `SITE_DATA.music` |
+| Music player | `<meting-js>` custom element created dynamically by `initMusic()` from `SITE_DATA.music`; `initAplayerAria` then injects Chinese `aria-label`s on APlayer buttons via `MutationObserver` |
+| Accessibility | APlayer controls get `aria-label` values (播放顺序/循环模式/播放列表) via `initAplayerAria` MutationObserver — add `aria-label` attrs in dark.css if styling new player elements |
 | Visibility title | Captures `prevTitle` when hidden (not at parse time); restores after 2 s |
 | Seasonal | Snowflakes (Dec–Feb, `SnowScene` from `snowflakesjs`), lanterns (Jan 21–Feb 15 lunar, CSS from `deng.css`) |
 | Game UID copy | `ClipboardJS` on `.copy-uid-btn`; toast via `showToast()` — do NOT use `swal()` |
