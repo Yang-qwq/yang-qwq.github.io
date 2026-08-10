@@ -353,7 +353,7 @@ function initAnime() {
     img.loading = 'lazy';
     img.alt = altText;
     img.onerror = function () {
-      this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150"><rect width="200" height="150" fill="%23f0e8d8" rx="8"/><text x="100" y="86" text-anchor="middle" fill="%23b8a088" font-size="28" font-family="sans-serif">?</text></svg>');
+      this.src = 'data:image/svg+xml,' + encodeURIComponent('');
       this.style.objectFit = 'contain';
       this.style.padding = '20px';
     };
